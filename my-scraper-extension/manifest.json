@@ -1,0 +1,19 @@
+{
+    "manifest_version": 3,
+    "name": "ChatGPT Content Fetcher",
+    "version": "1.0",
+    "description": "Fetch content from a URL and input it into ChatGPT.",
+    "permissions": ["activeTab", "scripting"],
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["content.js"]
+        }
+    ]
+}
